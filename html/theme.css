@@ -2,6 +2,10 @@ body {
 	background-color: lightblue;
 }
 
+h1{
+	text-align: center;
+}
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -40,3 +44,8 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+//Slideshow
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
