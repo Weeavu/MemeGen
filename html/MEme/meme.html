@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meme Generator</title>
+<style>
+	body{
+		background-color: teal;
+	}
+	#pic{
+		border-style: solid;
+	}
+	h1{
+		text-align: center;
+	}
+	
+	.meme{
+		text-align: center;
+		font-size: 50px;
+		font-weight: bold;
+		font-family: Impact, Charcoal, sans-serif;
+	}
+</style>
+<body>
+	<h1>Generate Your Own Meme!</h1>
+	<div align="center">Top Text:  <input type="text" id="topMeme" value="" onclick="this.value='';"> <br>
+						Bottom Text: <input type="text" id="botMeme" value="" onclick="this.value='';"> <br>
+						Select Meme: 
+						<select id="memeSelect" onchange="changeMeme()">
+							<option value="blackGUy.png">Black Guy
+							<option value="Cash_Me.jpg">Cash Me
+						</select>
+	</div>
+	<div align="center"><button type="button" onclick="memeGenerate()">Generate</button></div>
+	<br>
+
+	<p class="meme" id="top">Top Text</p>
+	<div align="center"><img id= "memePic" src="blackGUy.png" style="width: 700px; height: 500px;"></img></div>
+	<p class="meme" id="bot">Bottom Text</p>
+	
+	
+	<script>
+		function changeMeme(){
+			
+			var e = document.getElementById("memeSelect").value;
+			document.getElementById("memePic").src = e;		
+			
+		}
+	</script>
+	
+	<script>
+		function memeGenerate(){
+			
+			document.getElementById("memePic").src = "Cash_Me.jpg";
+			
+			var topText = document.getElementById("topMeme").value;
+			var botText = document.getElementById("botMeme").value;
+			
+			if(topText == ""){
+				document.getElementById("top").innerHTML = "";
+			}
+			
+			if(botText == ""){
+				document.getElementById("bot").innerHTML = "";
+			}
+			
+				document.getElementById("top").innerHTML = topText;
+				document.getElementById("bot").innerHTML = botText;
+			
+		}
+	</script>
+</body>
+
+</html>
