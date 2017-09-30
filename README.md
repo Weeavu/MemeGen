@@ -1,2 +1,2 @@
-# Vday
-Super awesome secret website for valentine's day
+# MemeGen
+A simple meme generator
