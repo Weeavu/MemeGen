@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+<div class="container-fluid">
+    
+    <div class="jumbotron">
+        <h1>You Meme a lot to Me</h1>
+    </div>
+    <div class="row" style="display:flex; flex-wrap: wrap;">
+        <% memes.forEach(function(meme){ %>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="/memes/ <%= meme.id %> ">
+                        <img src= "<%= meme.url %>">
+                        <div class="caption">
+                            <p><%= meme.name %></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include partials/footer %>
+
+

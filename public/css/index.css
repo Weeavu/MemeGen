@@ -1,0 +1,20 @@
+body{
+	background-color: teal;
+}
+#pic{
+	border-style: solid;
+}
+h1{
+	text-align: center;
+}
+
+.meme{
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+	font-family: Impact, Charcoal, sans-serif;
+}
+
+.container {
+	text-align: center;
+}

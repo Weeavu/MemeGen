@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+	<div class="container"> 
+		<h1>Generate Your Own Meme!</h1>
+		
+		<div class="input-group">
+			<span class="input-group-addon">Top Text:</span>
+			<input id="topMeme" type="text" class="form-control" onclick="this.value='';">
+		</div>
+		<div class="input-group">
+			<span class="input-group-addon">Bottom Text:</span>
+			<input id="botMeme" type="text" class="form-control" onclick="this.value='';">
+		</div>
+		
+		<br>
+		<button class="btn btn-default btn-large" type="button" onclick="memeGenerate()">Generate</button>
+		<br>
+		
+		<p class="meme" id="top">Top Text</p>
+		<img id= "memePic" src="<%= meme.url %>" style="width: 700px; height: 500px;"></img>
+		<p class="meme" id="bot">Bottom Text</p>
+	</div>
+	
+	<script src="js/index.js"></script>
+	
+<% include partials/footer %>
