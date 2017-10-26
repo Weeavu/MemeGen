@@ -8,7 +8,7 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", function(req, res){
-   res.render('index'); 
+   res.redirect('/memes'); 
 });
 
 app.get("/memes", function(req, res){
@@ -36,23 +36,14 @@ app.get("/memes/:id", function(req, res){
             var data = JSON.parse(body);
             var memes = data.data.memes;
             var retMeme;
-            
-            
-            //For some reason, the if statement doesnt work
-            console.log(req.params.id + " : " + memes[2].id);
-            console.log(typeof memes[2].id + typeof req.params.id);
-            if(req.params.id === memes[2].id){
-               console.log("hi");
-            }
+
             for(var i = 0; i < memes.length; i++){
-               if(memes[i].id === req.params.id) {
-                  console.log("hi");
+               if(memes[i].id.trim() == req.params.id.trim()) {
                   retMeme = memes[i];
                   break;
                }
             }
-            console.log(retMeme);
-            res.render('show', {meme: memes[2]});
+            res.render('show', {meme: retMeme});
          } else {
             console.log("Error");
          }

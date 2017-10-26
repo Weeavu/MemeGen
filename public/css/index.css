@@ -1,5 +1,5 @@
 body{
-	background-color: teal;
+	background-color: grey;
 }
 #pic{
 	border-style: solid;
@@ -17,4 +17,8 @@ h1{
 
 .container {
 	text-align: center;
+}
+
+#canMeme {
+	border: 2px solid white;
 }
