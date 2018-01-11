@@ -13,14 +13,7 @@ function memeGenerate(){
 	
 	var canvas = document.getElementById("canMeme");
 	var ctx = canvas.getContext("2d");
-	
-	var background = new Image();
-	background.src = canvas.style.backgroundImage.substring(4, 35);
-	
-	console.log(canvas.style.backgroundImage);
-	
-	ctx.drawImage(background, 0, 0);
-	
+
 	ctx.font = "35px Impact";
 	ctx.textAlign = "center";
 	ctx.fillStyle = "white";
@@ -33,14 +26,14 @@ function memeGenerate(){
 	ctx.fillText(botText, canvas.width/2, canvas.height - 20);
 	ctx.strokeText(botText, canvas.width/2, canvas.height - 20);
 	
-
-	download.style.visibility = "visible";
-	download.href = canToImage(canvas).src;
 	
-	console.log("hi");
+	download.style.visibility = "visible";
+	download.href = toImage(canvas).src;
+
+
 }
 
-function canToImage(canvas){
+function toImage(canvas) {
 	var image = new Image();
 	image.src = canvas.toDataURL("image/png");
 	return image;

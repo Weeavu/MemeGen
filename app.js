@@ -8,7 +8,7 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", function(req, res){
-   res.redirect('/memes'); 
+   res.render('swipe'); 
 });
 
 app.get("/memes", function(req, res){
